@@ -10,6 +10,7 @@ services:
       - "8069:8069"
     volumes:
       - /dev/bus/usb:/dev/bus/usb
+      - /dev/ttyTPE:/dev/ttyTPE
     tty: true
     privileged: true
     depends_on:
@@ -27,5 +28,5 @@ services:
       - db:/var/lib/postgresql/data/pgdata
 
 volumes:
-    db:
-    filestore:
+  db:
+  filestore:
